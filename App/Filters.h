@@ -35,25 +35,19 @@ using namespace cv;
 using namespace std;
 
 class FiltersClass {
-public:
-	Mat originalImage;
-	Mat processedImage;
-	myLabel select;
 
+public:
+	
+	
 	FiltersClass();
 	~FiltersClass();
 
 	Mat convertQImageToMat(QImage &image);
-	QPixmap convertMatToQPixmap(Mat &image);
 	QImage convertMapToQImage(const Mat& inMat);
-	Mat adjustContrast(Mat img, double alpha, int beta, double gamma);
+	Mat adjustImage(Mat img, double alpha, int beta, double gamma);
 	Mat noiseReduceMedian(Mat img);
 	Mat noiseReduceGaussian(Mat img);
 	Mat thresholdButton(Mat img);
-	vector<vector<Point>> detectContours(Mat img);
-	Mat drawContour(Mat img);
-	//Mat gammaCorrection(Mat img, double gamma);
-
 };
 
 #endif // !FILTERS_H

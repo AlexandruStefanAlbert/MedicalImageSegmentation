@@ -3,14 +3,11 @@
 
 FiltersClass::FiltersClass()
 {
-	this->originalImage = 0;
-	this->processedImage = 0;
-	
+		
 }
 FiltersClass::~FiltersClass()
 {
-	this->originalImage.deallocate();
-	this->processedImage.deallocate();
+	
 }
 
 Mat FiltersClass::convertQImageToMat(QImage &img)
@@ -84,18 +81,12 @@ QImage  FiltersClass::convertMapToQImage(const cv::Mat& inMat)
     return QImage();
 }
 
-QPixmap FiltersClass::convertMatToQPixmap(Mat &img)
-{
-	return QPixmap::fromImage(convertMapToQImage(img));
-	
-}
 
-Mat FiltersClass::adjustContrast(Mat img, double alpha, int beta, double gamma)
+
+Mat FiltersClass::adjustImage(Mat img, double alpha, int beta, double gamma)
 {
     
-    Mat new_img = Mat::zeros(img.size(), img.type());
-    int x1 = select.selectionRect.x(), y1= select.selectionRect.y(), width= select.selectionRect.width(), height= select.selectionRect.height();
- 
+    Mat new_img = Mat::zeros(img.size(), img.type()); 
 
     for (int y = 0; y <img.rows; y++)
     {
@@ -113,7 +104,7 @@ Mat FiltersClass::noiseReduceMedian(Mat img)
 {
     Mat new_img = Mat::zeros(img.size(), img.type());
 
-    medianBlur(img, new_img, 7);
+    medianBlur(img, new_img, 5);
 
     return new_img;
 
@@ -123,7 +114,7 @@ Mat FiltersClass::noiseReduceGaussian(Mat img)
 {
     Mat new_img = Mat::zeros(img.size(), img.type());
 
-    GaussianBlur(img, new_img, Size(5, 5),1,1, 4);
+    GaussianBlur(img, new_img, Size(5, 5),1.0);
 
     return new_img;
 }
@@ -131,42 +122,9 @@ Mat FiltersClass::noiseReduceGaussian(Mat img)
 Mat FiltersClass::thresholdButton(Mat img)
 {
     Mat new_img;
-    
-    
+   
+
     threshold(img, new_img, 200, 255, THRESH_BINARY);
-    
-
+ 
     return new_img;
 }
-
-
-Mat FiltersClass::drawContour(Mat img)
-{
-
-    std::vector<std::vector<cv::Point>> contours;
-
-    findContours(img, contours, RETR_LIST, CHAIN_APPROX_SIMPLE);
-
-    Mat contouredImage = img.clone();
-
-    drawContours(contouredImage, contours, -1, Scalar(0, 255, 0), 2);
-
-    return contouredImage;
-}
-/*Mat FiltersClass::gammaCorrection(Mat img, double gamma)
-{
-    Mat new_img = Mat::zeros(img.size(), img.type());
-    for (int y = 0; y < img.rows; y++)
-    {
-        for (int x = 0; x < img.cols; x++)
-        {
-            for (int c = 0; c < img.channels(); c++)
-            {
-                new_img.at<Vec3b>(y, x)[c] = saturate_cast<uchar>(pow(img.at<Vec3b>(y, x)[c] / 255.0, gamma) * 255.0);
-            }
-        }
-    }
-    return new_img;
-
-    
-}*/

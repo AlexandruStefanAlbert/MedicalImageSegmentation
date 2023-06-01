@@ -1,6 +1,7 @@
 #pragma once
 #ifndef MEDICALSEGMENTATIONDKAVCK_H
 #define MEDICALSEGMENTATIONDKAVCK_H
+#include <windows.h>
 #include "MyLabel.h"
 #include <QPainter>
 #include <QMouseEvent>
@@ -24,9 +25,11 @@
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
 #include <qmenubar.h>
+#include <QThread>
+
 
 using namespace cv;
-
+using namespace std;
 QT_BEGIN_NAMESPACE
 
 
@@ -38,33 +41,32 @@ private:
     QSlider* Contrast;
     QSlider* Brightness;
     QSlider* Gamma;
-    QCheckBox* AdjustContrast;
+    QCheckBox* adjustContrast;
     QCheckBox* AdjustBrightness;
     QCheckBox* AdjustGamma;
+    QCheckBox* changeColorCheck;
     QSlider* Zoom;
     QToolButton* Toolbox;
     QPushButton* noiseButton;
     QPushButton* thresholdButton;
     QPushButton* detectContourButton;
     QPushButton* drawContourButton;
-    QPushButton* pushButton_5;
+    QPushButton* playSnakeButton;
     QPushButton* pushButton_6;
     QLabel* label;
     QComboBox* Filters;
     QGroupBox* RightBox;
-    //QGraphicsView* graphicsView;
     QPushButton* LoadNewImage;
     QPushButton* saveAs;
     myLabel* imageLabel;
     QWidget widget;
     QImage image, newImg, processedImg, originalImage, thresholdedImg;
     QString style, boxStyle;
-    QRect selectionRect;
-    QMenuBar* menu;
-    QMenu* file;
-    bool selectionStarted;
-    std::vector<std::vector<cv::Point>> contour;
+    QRect selectionRect;      
+    vector<vector<Point>> contour;
     QMessageBox msg;
+    QString styleMainWindow;
+    double _alpha, _beta, _gamma;
   
 
 public:
@@ -84,7 +86,8 @@ public:
     void threshold();
     void detectContour();
     void drawContour();
-
+    void playSnake();
+    void changeColor();
 };
 namespace Ui {
     class MainWindow : public Ui_MainWindow {};    
