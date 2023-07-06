@@ -19,9 +19,6 @@ void Ui_MainWindow::setupUi(QDialog* MainWindow)
     MainWindow->setCursor(QCursor(Qt::ArrowCursor));
 
     MainWindow->setStyleSheet("background-color: rgb(230, 244, 254)");
-    //MainWindow->setStyleSheet("background-color: rgb(183, 203, 219)");
-
-    
 
     leftBox = new QGroupBox(MainWindow);
     leftBox->setObjectName("leftBox");
@@ -56,8 +53,6 @@ void Ui_MainWindow::setupUi(QDialog* MainWindow)
     gamma->setPageStep(1);
     gamma->setOrientation(Qt::Horizontal);
 
-    
-
     adjustContrast = new QCheckBox(leftBox);
     adjustContrast->setObjectName("adjustContrast");
     adjustContrast->setGeometry(QRect(210, 360, 111, 17));
@@ -78,9 +73,7 @@ void Ui_MainWindow::setupUi(QDialog* MainWindow)
     Zoom->setOrientation(Qt::Horizontal);
 
     Zoom->setStyleSheet("background-color: none; border-width: 0px; border-radius: 0px;");
-   /* toolbox = new QToolButton(leftBox);
-    toolbox->setObjectName("toolbox");
-    toolbox->setGeometry(QRect(230, 290, 51, 31));*/
+
     noiseButton = new QPushButton(leftBox);
     noiseButton->setObjectName("noiseButton");
     noiseButton->setGeometry(QRect(30, 90, 115, 37));
@@ -145,10 +138,6 @@ void Ui_MainWindow::setupUi(QDialog* MainWindow)
     rightBox->setGeometry(QRect(410, 60, 491, 551));
     rightBox->setAutoFillBackground(true);
     rightBox->setStyleSheet(boxStyle);
-    /*graphicsView = new QGraphicsView(rightBox);
-    graphicsView->setObjectName("graphicsView");
-    graphicsView->setGeometry(QRect(20, 20, 451, 400));
-    graphicsView->setAutoFillBackground(true);*/
 
     loadNewImage = new QPushButton(rightBox);
     loadNewImage->setObjectName("loadNewImage");
@@ -204,9 +193,6 @@ void Ui_MainWindow::setupUi(QDialog* MainWindow)
     connect(gamma, &QSlider::valueChanged, this, &Ui_MainWindow::gammaButton);
     connect(adjustGamma, &QCheckBox::pressed, this, &Ui_MainWindow::isGamma);
     connect(imageLabel, SIGNAL(paint), this, SLOT(paintEvent));
-   /* connect(imageLabel, SIGNAL(mouseRelease), this, SLOT(mouseReleaseEvent));
-    connect(imageLabel, SIGNAL(mousePress), this, SLOT(mousePressEvent));
-    connect(imageLabel, SIGNAL(mouseMove), this, SLOT(mouseMoveEvent));*/
     
     connect(noiseButton, &QPushButton::released, this, &Ui_MainWindow::noise);
     connect(thresholdButton, &QPushButton::released, this, &Ui_MainWindow::thresholded);
@@ -229,7 +215,6 @@ void Ui_MainWindow::retranslateUi(QDialog* MainWindow)
     adjustContrast->setText(QCoreApplication::translate("MainWindow", "Adjust contrast", nullptr));
     adjustBrightness->setText(QCoreApplication::translate("MainWindow", "Adjust brightness", nullptr));
     adjustGamma->setText(QCoreApplication::translate("MainWindow", "Adjust gamma", nullptr));
-//  toolbox->setText(QCoreApplication::translate("MainWindow", "toolbox", nullptr));
     noiseButton->setText(QCoreApplication::translate("MainWindow", "1. Noise reduce", nullptr));
     thresholdButton->setText(QCoreApplication::translate("MainWindow", "2. Thresholding", nullptr));
     detectContourButton->setText(QCoreApplication::translate("MainWindow", "3. Detect Contour", nullptr));
@@ -267,8 +252,6 @@ void Ui_MainWindow::detectContour()
         Mat gray;
         cvtColor(img, gray, COLOR_BGR2GRAY);
         Mat thresholded;
-
-        //cv::threshold(gray, thresholded, 1, 255, cv::THRESH_BINARY);
 
         cv::findContours(gray, contour, RETR_LIST, CHAIN_APPROX_SIMPLE);
 
@@ -314,14 +297,8 @@ void Ui_MainWindow::playSnake()
     
      Mat _contouredImage = original.clone();
     imageLabel->drawStartContour(_contouredImage, imageLabel->points);
-     
-    
   
    //preprocesare imagine
-
-   //reducere zgomot
-    //GaussianBlur(original, original, cv::Size(5, 5), 0);
-
    //threshold
     threshold(original, original, 120, 255, THRESH_BINARY);
 
@@ -330,15 +307,6 @@ void Ui_MainWindow::playSnake()
     morphologyEx(original, original, cv::MORPH_OPEN, structuringElement);    
 
 
-
-    //initializare contour snake cu conturul curent desenat
-    //imageLabel->newContour = imageLabel->points;
-    //aducerea conturului snake la coordonatele conturului desenat
-    /*for (int i = 0; i < imageLabel->points.size(); i++) {
-        imageLabel->newContour[i].setX(imageLabel->points[i].x() - imageLabel->_diffX);
-        imageLabel->newContour[i].setY(imageLabel->points[i].y() - imageLabel->_diffY);
-    }*/
-    //int beta = this->_beta / 10;
     int beta = this->_betaSnake;
     //Verific daca conturul sarpelui a fost initializat
     if (!imageLabel->newContour.isEmpty())
@@ -346,8 +314,7 @@ void Ui_MainWindow::playSnake()
         //iterari succesive pentru calcularea noului contur snake
         for (int iter = 1; iter < 150; iter++)
         {
-            //snakeContour = imageLabel->minimzeEnergy(imageLabel->newContour, original, 0.15, 0.15, 0.005);
-            snakeContour = imageLabel->minimzeEnergy(imageLabel->newContour, original, this->_alphaSnake, beta, 0.05);
+            snakeContour = imageLabel->minimzeEnergy(imageLabel->newContour, original, this->_alphaSnake, this->_betaSnake, 0.05);
 
             Mat contouredImage = _contouredImage.clone();
             //desenarea snakeContour 
@@ -361,11 +328,9 @@ void Ui_MainWindow::playSnake()
             cv::Point pt2(snakeContour.back().x(), snakeContour.back().y());
             cv::line(contouredImage, pt1, pt2, cv::Scalar(0, 255, 0), 1);
 
-
             originalImage = filters.convertMapToQImage(contouredImage);
 
             imageLabel->clear();
-
             //afisarea pe Label a imaginii cu noul contur actualizat
             imageLabel->setPixmap(QPixmap::fromImage(originalImage.scaledToHeight(image.height(), Qt::SmoothTransformation)));
             imageLabel->update();
@@ -393,21 +358,14 @@ void Ui_MainWindow::drawContour()
     {
         FiltersClass filters;
         PlaySound(TEXT("click2.wav"), NULL, SND_FILENAME | SND_ASYNC);
-        Mat original = filters.convertQImageToMat(image);
-        
-        Mat contouredImage = original.clone();
-        
-   
+        Mat original = filters.convertQImageToMat(image);       
+        Mat contouredImage = original.clone();   
         drawContours(contouredImage, contour, -1, Scalar(0, 255, 0), 2);
 
         originalImage = filters.convertMapToQImage(contouredImage);
-
         imageLabel->clear();
-
         imageLabel->setPixmap(QPixmap::fromImage(originalImage.scaledToHeight(image.height(), Qt::SmoothTransformation)));
-        imageLabel->update();
-        
-
+        imageLabel->update();    
         processedImg = originalImage;
     }    
     else
@@ -464,7 +422,6 @@ void Ui_MainWindow::thresholded()
     Mat new_img;
     //Aplicarea funcției thresholdFunction asupra imaginii încărcate
     new_img = filters.thresholdFunction(img);   
-    //cv::Sobel(img, new_img,-1, 0, 1);
     //Convertirea imaginii segmentate într-un obiect QImage
     thresholdedImg = filters.convertMapToQImage(new_img);
     imageLabel->clear();
@@ -503,7 +460,6 @@ void Ui_MainWindow::applyWatershed()
 void Ui_MainWindow::zoomButton()
 {
    
-    //image = image.scaledToWidth(graphicsView->width() + Zoom->value(), Qt::SmoothTransformation);
     if(!processedImg.isNull())
         newImg= processedImg.scaledToHeight(imageLabel->height() + Zoom->value() * 3, Qt::SmoothTransformation);
     else
@@ -603,14 +559,12 @@ void Ui_MainWindow::isContrast()
     if (!adjustContrast->isChecked())
     {
         PlaySound(TEXT("onClick.wav"), NULL, SND_FILENAME | SND_ASYNC);
-       // imageLabel->setPixmap(QPixmap::fromImage(image.scaledToHeight(image.height(), Qt::SmoothTransformation)));
         contrast->setEnabled(true);             
     }
     else
     {
         PlaySound(TEXT("offClick.wav"), NULL, SND_FILENAME | SND_ASYNC);
         contrast->setDisabled(true);
-        //imageLabel->setPixmap(QPixmap::fromImage(image.scaledToHeight(image.height(), Qt::SmoothTransformation)));
     }
 }
 /// <summary>
@@ -622,13 +576,11 @@ void Ui_MainWindow::isBrightness()
     {
         PlaySound(TEXT("onClick.wav"), NULL, SND_FILENAME | SND_ASYNC);
         brightness->setEnabled(true);
-       // imageLabel->setPixmap(QPixmap::fromImage(image.scaledToHeight(image.height(), Qt::SmoothTransformation)));
     }
     else
     {
         PlaySound(TEXT("offClick.wav"), NULL, SND_FILENAME | SND_ASYNC);
         brightness->setDisabled(true);
-        //imageLabel->setPixmap(QPixmap::fromImage(image.scaledToHeight(image.height(), Qt::SmoothTransformation)));
     }
 }
 /// <summary>

@@ -44,12 +44,7 @@ void MyLabel::drawStartContour(Mat img, QVector<QPoint>& contour)
 {
     int size = contour.size();
     std::vector<cv::Point> points;
-    /*int x = this->width();
-    int y = this->height();
-
-    diffX = (x - img.cols)/2;
-    diffY = (y - img.rows)/2;*/
-
+   
     setDiff(img);
     setContour();
 
@@ -84,17 +79,7 @@ QVector<QPoint> MyLabel::computeInternalEnergy(const QVector<QPoint>& contour, d
         QPoint current = contour[i % contour.size()];
         double dx = current.x() - prev.x();
         double dy = current.y() - prev.y();
-        double dist = sqrt(dx*dx + dy*dy);
-  
-        double first_derivative_x = pow(next.x() - contour[i].x(),2);
-        double first_derivative_y = pow(next.y() - contour[i].y(),2);
-
-        double second_derivative_x = pow((next.x() - 2 * contour[i].x() + prev.x()), 2);
-        double second_derivative_y = pow((next.y() - 2 * contour[i].y() + prev.y()), 2);
-
-        double firstD = (first_derivative_x + first_derivative_y);
-        double secondD = (second_derivative_x + second_derivative_y);
-        
+        double dist = sqrt(dx*dx + dy*dy);     
         
         internalEnergy[i] = alpha * (next - current)/(dist) + beta * (next - 2 * current + prev)/(dist*dist);
        }
@@ -196,9 +181,7 @@ void MyLabel::paintEvent(QPaintEvent* e)
     QPainter painter(this);
     
     painter.setPen(QPen(QColor(255, 0, 0), 1.5, Qt::SolidLine));
-    //painter.setBrush(QBrush(QColor(0, 0, 0)));
-
-    //painter.drawRect(selectionRect);
+  
         
     painter.drawPolyline(points);
 
@@ -214,8 +197,7 @@ void MyLabel::mousePressEvent(QMouseEvent* e)
 {
     if (e->button() == Qt::LeftButton)
     {
-        //if (selectionRect.contains(e->pos()))
-            //contextMenu.exec(this->mapToGlobal(e->pos()));
+        
         selectionStarted = true;
         points.push_back(e->pos());
     }
@@ -225,8 +207,7 @@ void MyLabel::mousePressEvent(QMouseEvent* e)
         this->update();
     }
     
-    
-    //emit mousePress();
+   
 }
 /// <summary>
 /// Miscarea mouselui
@@ -238,7 +219,7 @@ void MyLabel::mouseMoveEvent(QMouseEvent* e)
     {
         repaint();
     }
-    //emit mouseMove();
+ 
 }
 /// <summary>
 /// Cand se elibereaza mouse-ului se incheie evenimentul de desenare a punctului din contur.
@@ -247,6 +228,5 @@ void MyLabel::mouseMoveEvent(QMouseEvent* e)
 void MyLabel::mouseReleaseEvent(QMouseEvent* e)
 {
     selectionStarted = false;
-    
-    //emit mouseRelease();
+   
 }
