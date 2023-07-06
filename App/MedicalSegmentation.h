@@ -30,6 +30,7 @@
 
 using namespace cv;
 using namespace std;
+
 QT_BEGIN_NAMESPACE
 
 
@@ -37,37 +38,42 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow: public QObject
 {
 private:
-    QGroupBox* LeftBox;
-    QSlider* Contrast;
-    QSlider* Brightness;
-    QSlider* Gamma;
-    QCheckBox* adjustContrast;
-    QCheckBox* AdjustBrightness;
-    QCheckBox* AdjustGamma;
-    QCheckBox* changeColorCheck;
+    QGroupBox* leftBox;
+    QGroupBox* rightBox;
+    QSlider* contrast;
+    QSlider* brightness;
+    QSlider* gamma;
     QSlider* Zoom;
-    QToolButton* Toolbox;
+    QSlider* alphaSnake;
+    QSlider* betaSnake;
+
+    QCheckBox* adjustContrast;
+    QCheckBox* adjustBrightness;
+    QCheckBox* adjustGamma;
+       
+    QToolButton* toolbox;
     QPushButton* noiseButton;
     QPushButton* thresholdButton;
     QPushButton* detectContourButton;
     QPushButton* drawContourButton;
     QPushButton* playSnakeButton;
-    QPushButton* pushButton_6;
-    QLabel* label;
-    QComboBox* Filters;
-    QGroupBox* RightBox;
-    QPushButton* LoadNewImage;
+    QPushButton* watershedButton;
+    QPushButton* loadNewImage;
     QPushButton* saveAs;
-    myLabel* imageLabel;
+    QLabel* label;
+    QLabel* alphaValue, *betaValue, *gammaValue, *alphaSnakeValue, *betaSnakeValue;
+    QComboBox* filters;
+    MyLabel* imageLabel;
     QWidget widget;
-    QImage image, newImg, processedImg, originalImage, thresholdedImg;
-    QString style, boxStyle;
+    QImage image, newImg, processedImg, originalImage, thresholdedImg, watershedImg;
+    QString buttonsStyle, boxStyle;
     QRect selectionRect;      
     vector<vector<Point>> contour;
     QMessageBox msg;
     QString styleMainWindow;
     double _alpha, _beta, _gamma;
-  
+    double _alphaSnake, _betaSnake;
+    QVector<QPoint> snakeContour;
 
 public:
     
@@ -83,11 +89,13 @@ public:
     void isBrightness();
     void isGamma();
     void noise();
-    void threshold();
+    void thresholded();
     void detectContour();
     void drawContour();
     void playSnake();
-    void changeColor();
+    void applyWatershed();
+    void alphaSnakeSlider();
+    void betaSnakeSlider();
 };
 namespace Ui {
     class MainWindow : public Ui_MainWindow {};    

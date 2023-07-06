@@ -15,29 +15,37 @@ using namespace cv;
 #ifndef MYLABEL_H
 #define MYLABEL_H
 
-class myLabel : public QLabel
+class MyLabel : public QLabel
 {
 	
 
 	Q_OBJECT
+
+private:
+	void setDiff(Mat img);
+	void setContour();
+
 public:
 	bool selectionStarted;
 	QMenu contextMenu;
 	QVector<QPoint> points; //startContour
 	QVector<QPoint> newContour;
 	QPixmap newPixmap;
-	int diffX, diffY;
+	int _diffX, _diffY;
 	
-public:
 	
-	myLabel(QWidget* parent = 0);
-	~myLabel();
+
+	
+	MyLabel(QWidget* parent = 0);
+	~MyLabel();
 
 	void drawStartContour(Mat img, QVector<QPoint>& contour);
+	
 	QVector<QPoint> computeInternalEnergy(const QVector<QPoint>& contour, double alpha, double beta);
-	QVector<QPoint> computeExternalEnergy(const Mat& image,  const QVector<QPoint>& contour, double gamma);
+	QVector<QPoint> computeExternalEnergy(const Mat& image,  const QVector<QPoint>& contour);
 	QVector<QPoint> computeEnergy(const cv::Mat& image, const QVector<QPoint>& contour,  double alpha, double beta, double gamma);
 	QVector<QPoint> minimzeEnergy(QVector<QPoint> contour,  const cv::Mat& image, double alpha, double beta, double gamma);
+
 public slots:
 	void paintEvent(QPaintEvent* e);
 	void mousePressEvent(QMouseEvent* e);

@@ -34,6 +34,7 @@
 using namespace cv;
 using namespace std;
 
+
 class FiltersClass {
 
 public:
@@ -47,7 +48,9 @@ public:
 	Mat adjustImage(Mat img, double alpha, int beta, double gamma);
 	Mat noiseReduceMedian(Mat img);
 	Mat noiseReduceGaussian(Mat img);
-	Mat thresholdButton(Mat img);
+	Mat thresholdFunction(Mat img);
+	Mat watershedFunction(Mat img);
 };
+
 
 #endif // !FILTERS_H

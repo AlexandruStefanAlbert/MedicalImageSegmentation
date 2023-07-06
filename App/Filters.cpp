@@ -1,4 +1,4 @@
-#include "Filters.h"
+﻿#include "Filters.h"
 #include "MyLabel.h"
 
 FiltersClass::FiltersClass()
@@ -9,12 +9,21 @@ FiltersClass::~FiltersClass()
 {
 	
 }
-
+/// <summary>
+/// Conversia unei imagini sub forma unui obiect QImage intr-un obiect de tipul Mat din librarira OpenCV
+/// </summary>
+/// <param name="img"></param>
+/// <returns>O imagine Mat</returns>
 Mat FiltersClass::convertQImageToMat(QImage &img)
 {
 	img = img.convertToFormat(QImage::Format_RGB888, Qt::ColorOnly).rgbSwapped();
 	return cv::Mat(img.height(), img.width(), CV_8UC3, img.bits(), img.bytesPerLine()).clone();
 }
+/// <summary>
+/// Conversia unui imagini sub forma de obiect Mat intr-un obiect QImage din libraria QT
+/// </summary>
+/// <param name="inMat"></param>
+/// <returns>O imagine QImage</returns>
 QImage  FiltersClass::convertMapToQImage(const cv::Mat& inMat)
 {
     switch (inMat.type())
@@ -81,8 +90,14 @@ QImage  FiltersClass::convertMapToQImage(const cv::Mat& inMat)
     return QImage();
 }
 
-
-
+/// <summary>
+/// Imbunatatirea calitatii imaginii, ajustarea constrastului, luminozitatii, factorului gamma
+/// </summary>
+/// <param name="img"></param>
+/// <param name="alpha"></param>
+/// <param name="beta"></param>
+/// <param name="gamma"></param>
+/// <returns>O imagine imbunatatita astfel incat sa se realizeze segmentarea sau sa se evidentieze anumite zone de interes</returns>
 Mat FiltersClass::adjustImage(Mat img, double alpha, int beta, double gamma)
 {
     
@@ -100,6 +115,11 @@ Mat FiltersClass::adjustImage(Mat img, double alpha, int beta, double gamma)
     }
     return new_img;
 }
+/// <summary>
+/// Reducerea zgomotului aplicand un filtru de Median Blur
+/// </summary>
+/// <param name="img"></param>
+/// <returns>Imaginea imbunatatita dupa aplicarea filtrului de Median Blur</returns>
 Mat FiltersClass::noiseReduceMedian(Mat img)
 {
     Mat new_img = Mat::zeros(img.size(), img.type());
@@ -110,6 +130,11 @@ Mat FiltersClass::noiseReduceMedian(Mat img)
 
 
 }
+/// <summary>
+/// Reducerea zgomotului aplicand un filtru Gaussian
+/// </summary>
+/// <param name="img"></param>
+/// <returns>Imaginea imbunatatita dupa aplicarea filtrului Gaussian</returns>
 Mat FiltersClass::noiseReduceGaussian(Mat img)
 {
     Mat new_img = Mat::zeros(img.size(), img.type());
@@ -118,13 +143,118 @@ Mat FiltersClass::noiseReduceGaussian(Mat img)
 
     return new_img;
 }
-
-Mat FiltersClass::thresholdButton(Mat img)
+/// <summary>
+/// Segmentarea imaginii pentru extragerea tumorii
+/// </summary>
+/// <param name="img"></param>
+/// <returns>O imagine binarizata ce reprezinta masca tumorii</returns>
+Mat FiltersClass::thresholdFunction(Mat img)
 {
     Mat new_img;
    
+    //cvtColor(img, img, COLOR_BGR2GRAY);
+    threshold(img, new_img, 150, 255, THRESH_BINARY);
+    
 
-    threshold(img, new_img, 200, 255, THRESH_BINARY);
- 
+    Mat structuringElement = cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(15, 15));
+    cv::morphologyEx(new_img, new_img, cv::MORPH_OPEN, structuringElement);
+
+    
     return new_img;
+}
+
+Mat FiltersClass::watershedFunction(Mat img)
+{
+    // Create a kernel that we will use to sharpen our image
+    Mat kernel = (Mat_<float>(3, 3) <<
+        1, 1, 1,
+        1, -8, 1,
+        1, 1, 1); // an approximation of second derivative, a quite strong kernel
+
+    Mat imgLaplacian;
+    filter2D(img, imgLaplacian, CV_32F, kernel);
+    Mat sharp;
+    img.convertTo(sharp, CV_32F);
+    Mat imgResult = sharp - imgLaplacian;
+
+    // convert back to 8bits gray scale
+    imgResult.convertTo(imgResult, CV_8UC3);
+    imgLaplacian.convertTo(imgLaplacian, CV_8UC3);
+    // Create binary image from source image
+    Mat bw;
+    cvtColor(imgResult, bw, COLOR_BGR2GRAY);
+    threshold(bw, bw, 120, 255, THRESH_BINARY);
+
+    Mat structuringElement = cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(10, 10));
+    cv::morphologyEx(bw, bw, cv::MORPH_OPEN, structuringElement);
+
+    // Perform the distance transform algorithm
+    Mat dist;
+    distanceTransform(bw, dist, DIST_L2, 3);
+
+    // Normalize the distance image for range = {0.0, 1.0}
+    // so we can visualize and threshold it
+    normalize(dist, dist, 0, 1.0, NORM_MINMAX);
+
+    // Threshold to obtain the peaks
+    // This will be the markers for the foreground objects
+
+    threshold(dist, dist, 0.4, 1.0, THRESH_BINARY);
+    cv::morphologyEx(dist, dist, cv::MORPH_OPEN, structuringElement);
+
+    // Dilate a bit the dist image
+    Mat new_kernel = Mat::ones(3, 3, CV_8U);
+    dilate(dist, dist, new_kernel);
+
+    // Create the CV_8U version of the distance image
+    // It is needed for findContours()
+    Mat dist_8u;
+    dist.convertTo(dist_8u, CV_8U);
+    vector<vector<Point> > contours;
+    std::vector<cv::Vec4i> hierarchy;
+    findContours(dist_8u, contours, hierarchy, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
+    // Create the marker image for the watershed algorithm
+    Mat markers = Mat::zeros(dist.size(), CV_32S);
+
+    // Draw the foreground markers
+    for (size_t i = 0; i < contours.size(); i++)
+    {
+        drawContours(markers, contours, static_cast<int>(i), Scalar(static_cast<int>(i) + 1), -1);
+    }
+
+    // Draw the background marker
+    circle(markers, Point(5, 5), 3, Scalar(255), -1);
+    Mat markers8u;
+    markers.convertTo(markers8u, CV_8U, 10);
+
+    watershed(imgResult, markers);
+    Mat mark;
+    markers.convertTo(mark, CV_8U);
+    bitwise_not(mark, mark);
+
+    // Generate random colors
+    vector<Vec3b> colors;
+    for (size_t i = 0; i < contours.size(); i++)
+    {
+        int b = theRNG().uniform(0, 256);
+        int g = theRNG().uniform(0, 256);
+        int r = theRNG().uniform(0, 256);
+        colors.push_back(Vec3b((uchar)b, (uchar)g, (uchar)r));
+    }
+    // Create the result image
+    //Mat dst = Mat::zeros(markers.size(), CV_8UC3);
+    // Fill labeled objects with random colors
+    for (int i = 0; i < markers.rows; i++)
+    {
+        for (int j = 0; j < markers.cols; j++)
+        {
+            int index = markers.at<int>(i, j);
+            if (index > 0 && index <= static_cast<int>(contours.size()))
+            {
+                img.at<Vec3b>(i, j) = colors[index - 1];
+            }
+        }
+    }
+
+    return img;
 }
