@@ -9,21 +9,13 @@ FiltersClass::~FiltersClass()
 {
 	
 }
-/// <summary>
-/// Conversia unei imagini sub forma unui obiect QImage intr-un obiect de tipul Mat din librarira OpenCV
-/// </summary>
-/// <param name="img"></param>
-/// <returns>O imagine Mat</returns>
+
 Mat FiltersClass::convertQImageToMat(QImage &img)
 {
 	img = img.convertToFormat(QImage::Format_RGB888, Qt::ColorOnly).rgbSwapped();
 	return cv::Mat(img.height(), img.width(), CV_8UC3, img.bits(), img.bytesPerLine()).clone();
 }
-/// <summary>
-/// Conversia unui imagini sub forma de obiect Mat intr-un obiect QImage din libraria QT
-/// </summary>
-/// <param name="inMat"></param>
-/// <returns>O imagine QImage</returns>
+
 QImage  FiltersClass::convertMapToQImage(const cv::Mat& inMat)
 {
     switch (inMat.type())
@@ -90,14 +82,7 @@ QImage  FiltersClass::convertMapToQImage(const cv::Mat& inMat)
     return QImage();
 }
 
-/// <summary>
-/// Imbunatatirea calitatii imaginii, ajustarea constrastului, luminozitatii, factorului gamma
-/// </summary>
-/// <param name="img"></param>
-/// <param name="alpha"></param>
-/// <param name="beta"></param>
-/// <param name="gamma"></param>
-/// <returns>O imagine imbunatatita astfel incat sa se realizeze segmentarea sau sa se evidentieze anumite zone de interes</returns>
+
 Mat FiltersClass::adjustImage(Mat img, double alpha, int beta, double gamma)
 {
     
@@ -115,11 +100,7 @@ Mat FiltersClass::adjustImage(Mat img, double alpha, int beta, double gamma)
     }
     return new_img;
 }
-/// <summary>
-/// Reducerea zgomotului aplicand un filtru de Median Blur
-/// </summary>
-/// <param name="img"></param>
-/// <returns>Imaginea imbunatatita dupa aplicarea filtrului de Median Blur</returns>
+
 Mat FiltersClass::noiseReduceMedian(Mat img)
 {
     Mat new_img = Mat::zeros(img.size(), img.type());
@@ -130,11 +111,7 @@ Mat FiltersClass::noiseReduceMedian(Mat img)
 
 
 }
-/// <summary>
-/// Reducerea zgomotului aplicand un filtru Gaussian
-/// </summary>
-/// <param name="img"></param>
-/// <returns>Imaginea imbunatatita dupa aplicarea filtrului Gaussian</returns>
+
 Mat FiltersClass::noiseReduceGaussian(Mat img)
 {
     Mat new_img = Mat::zeros(img.size(), img.type());
@@ -143,11 +120,7 @@ Mat FiltersClass::noiseReduceGaussian(Mat img)
 
     return new_img;
 }
-/// <summary>
-/// Segmentarea imaginii pentru extragerea tumorii
-/// </summary>
-/// <param name="img"></param>
-/// <returns>O imagine binarizata ce reprezinta masca tumorii</returns>
+
 Mat FiltersClass::thresholdFunction(Mat img)
 {
     Mat new_img;
