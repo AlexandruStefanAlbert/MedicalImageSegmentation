@@ -1,0 +1,955 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'cv::MatStep::buf' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/mat.inl.hpp"
+                },
+                "region": {
+                  "startLine": 1239,
+                  "startColumn": 10,
+                  "endLine": 1239,
+                  "endColumn": 10
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::MatStep::{ctor}",
+                  "decoratedName": "??0MatStep@cv@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "cv::MatStep::buf"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Variable 'cv::MatStep::buf' is uninitialized. Always initialize a member variable (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/mat.inl.hpp"
+                },
+                "region": {
+                  "startLine": 1245,
+                  "startColumn": 10,
+                  "endLine": 1245,
+                  "endColumn": 10
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::MatStep::{ctor}",
+                  "decoratedName": "??0MatStep@cv@@QEAA@_K@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "cv::MatStep::buf"
+          }
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/mat.inl.hpp"
+                },
+                "region": {
+                  "startLine": 1874,
+                  "startColumn": 12,
+                  "endLine": 1874,
+                  "endColumn": 12
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::SparseMat::elemSize",
+                  "decoratedName": "?elemSize@SparseMat@cv@@QEBA_KXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/mat.inl.hpp"
+                },
+                "region": {
+                  "startLine": 1874,
+                  "startColumn": 12,
+                  "endLine": 1874,
+                  "endColumn": 12
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::SparseMat::elemSize",
+                  "decoratedName": "?elemSize@SparseMat@cv@@QEBA_KXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/utility.hpp"
+                },
+                "region": {
+                  "startLine": 568,
+                  "startColumn": 61,
+                  "endLine": 568,
+                  "endColumn": 61
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::getElemSize",
+                  "decoratedName": "?getElemSize@cv@@YA_KH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/utility.hpp"
+                },
+                "region": {
+                  "startLine": 568,
+                  "startColumn": 61,
+                  "endLine": 568,
+                  "endColumn": 61
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::getElemSize",
+                  "decoratedName": "?getElemSize@cv@@YA_KH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/imgproc.hpp"
+                },
+                "region": {
+                  "startLine": 4962,
+                  "startColumn": 16,
+                  "endLine": 4962,
+                  "endColumn": 40
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::LineIterator::++",
+                  "decoratedName": "??ELineIterator@cv@@QEAAAEAV01@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///E:/Desktop/TEME FACULTATE/PIU/PIU_FinalProject/MedicalSegmentation/MyLabel.cpp"
+                },
+                "region": {
+                  "startLine": 80,
+                  "startColumn": 32,
+                  "endLine": 80,
+                  "endColumn": 36
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MyLabel::computeInternalEnergy",
+                  "decoratedName": "?computeInternalEnergy@MyLabel@@QEAA?AV?$QList@VQPoint@@@@AEBV2@NN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///E:/Desktop/TEME FACULTATE/PIU/PIU_FinalProject/MedicalSegmentation/MyLabel.cpp"
+                },
+                "region": {
+                  "startLine": 82,
+                  "startColumn": 33,
+                  "endLine": 82,
+                  "endColumn": 37
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MyLabel::computeInternalEnergy",
+                  "decoratedName": "?computeInternalEnergy@MyLabel@@QEAA?AV?$QList@VQPoint@@@@AEBV2@NN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///E:/Desktop/TEME FACULTATE/PIU/PIU_FinalProject/MedicalSegmentation/MyLabel.cpp"
+                },
+                "region": {
+                  "startLine": 85,
+                  "startColumn": 21,
+                  "endLine": 85,
+                  "endColumn": 41
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MyLabel::computeInternalEnergy",
+                  "decoratedName": "?computeInternalEnergy@MyLabel@@QEAA?AV?$QList@VQPoint@@@@AEBV2@NN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///E:/Desktop/TEME FACULTATE/PIU/PIU_FinalProject/MedicalSegmentation/MyLabel.cpp"
+                },
+                "region": {
+                  "startLine": 86,
+                  "startColumn": 21,
+                  "endLine": 86,
+                  "endColumn": 41
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MyLabel::computeInternalEnergy",
+                  "decoratedName": "?computeInternalEnergy@MyLabel@@QEAA?AV?$QList@VQPoint@@@@AEBV2@NN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6294",
+          "message": {
+            "text": "Ill-defined for-loop.  Loop body not executed."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/matx.hpp"
+                },
+                "region": {
+                  "startLine": 578,
+                  "startColumn": 5,
+                  "endLine": 578,
+                  "endColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::Matx<float,3,1>::{ctor}",
+                  "decoratedName": "??0?$Matx@M$02$00@cv@@QEAA@MMM@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6201",
+          "message": {
+            "text": "Index '3' is out of valid index range '0' to '2' for possibly stack allocated buffer 'this->val'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/matx.hpp"
+                },
+                "region": {
+                  "startLine": 578,
+                  "startColumn": 39,
+                  "endLine": 578,
+                  "endColumn": 44
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::Matx<float,3,1>::{ctor}",
+                  "decoratedName": "??0?$Matx@M$02$00@cv@@QEAA@MMM@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6294",
+          "message": {
+            "text": "Ill-defined for-loop.  Loop body not executed."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/matx.hpp"
+                },
+                "region": {
+                  "startLine": 578,
+                  "startColumn": 5,
+                  "endLine": 578,
+                  "endColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::Matx<double,3,1>::{ctor}",
+                  "decoratedName": "??0?$Matx@N$02$00@cv@@QEAA@NNN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6201",
+          "message": {
+            "text": "Index '3' is out of valid index range '0' to '2' for possibly stack allocated buffer 'this->val'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/matx.hpp"
+                },
+                "region": {
+                  "startLine": 578,
+                  "startColumn": 39,
+                  "endLine": 578,
+                  "endColumn": 44
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::Matx<double,3,1>::{ctor}",
+                  "decoratedName": "??0?$Matx@N$02$00@cv@@QEAA@NNN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6294",
+          "message": {
+            "text": "Ill-defined for-loop.  Loop body not executed."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/matx.hpp"
+                },
+                "region": {
+                  "startLine": 570,
+                  "startColumn": 5,
+                  "endLine": 570,
+                  "endColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::Matx<float,2,1>::{ctor}",
+                  "decoratedName": "??0?$Matx@M$01$00@cv@@QEAA@MM@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6201",
+          "message": {
+            "text": "Index '2' is out of valid index range '0' to '1' for possibly stack allocated buffer 'this->val'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/matx.hpp"
+                },
+                "region": {
+                  "startLine": 570,
+                  "startColumn": 39,
+                  "endLine": 570,
+                  "endColumn": 44
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::Matx<float,2,1>::{ctor}",
+                  "decoratedName": "??0?$Matx@M$01$00@cv@@QEAA@MM@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6294",
+          "message": {
+            "text": "Ill-defined for-loop.  Loop body not executed."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/matx.hpp"
+                },
+                "region": {
+                  "startLine": 570,
+                  "startColumn": 5,
+                  "endLine": 570,
+                  "endColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::Matx<double,2,1>::{ctor}",
+                  "decoratedName": "??0?$Matx@N$01$00@cv@@QEAA@NN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6201",
+          "message": {
+            "text": "Index '2' is out of valid index range '0' to '1' for possibly stack allocated buffer 'this->val'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/matx.hpp"
+                },
+                "region": {
+                  "startLine": 570,
+                  "startColumn": 39,
+                  "endLine": 570,
+                  "endColumn": 44
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::Matx<double,2,1>::{ctor}",
+                  "decoratedName": "??0?$Matx@N$01$00@cv@@QEAA@NN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6294",
+          "message": {
+            "text": "Ill-defined for-loop.  Loop body not executed."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/matx.hpp"
+                },
+                "region": {
+                  "startLine": 586,
+                  "startColumn": 5,
+                  "endLine": 586,
+                  "endColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::Matx<float,4,1>::{ctor}",
+                  "decoratedName": "??0?$Matx@M$03$00@cv@@QEAA@MMMM@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6201",
+          "message": {
+            "text": "Index '4' is out of valid index range '0' to '3' for possibly stack allocated buffer 'this->val'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/matx.hpp"
+                },
+                "region": {
+                  "startLine": 586,
+                  "startColumn": 39,
+                  "endLine": 586,
+                  "endColumn": 44
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::Matx<float,4,1>::{ctor}",
+                  "decoratedName": "??0?$Matx@M$03$00@cv@@QEAA@MMMM@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6294",
+          "message": {
+            "text": "Ill-defined for-loop.  Loop body not executed."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/matx.hpp"
+                },
+                "region": {
+                  "startLine": 586,
+                  "startColumn": 5,
+                  "endLine": 586,
+                  "endColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::Matx<double,4,1>::{ctor}",
+                  "decoratedName": "??0?$Matx@N$03$00@cv@@QEAA@NNNN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6201",
+          "message": {
+            "text": "Index '4' is out of valid index range '0' to '3' for possibly stack allocated buffer 'this->val'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/matx.hpp"
+                },
+                "region": {
+                  "startLine": 586,
+                  "startColumn": 39,
+                  "endLine": 586,
+                  "endColumn": 44
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cv::Matx<double,4,1>::{ctor}",
+                  "decoratedName": "??0?$Matx@N$03$00@cv@@QEAA@NNNN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.33.31630.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/mat.inl.hpp"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "68f9f3826e1997604597f7c1014225842673281a3eb54ae3b5bc5c1e66fe3cd1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/utility.hpp"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "a981134ae9e81123a00bccd54ed2d5017c9691430be71a736e29214c3e2ea2eb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/imgproc.hpp"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "4f2ee3f657e40571cb7054513f184715227962c8af8264f1beae23367440135b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///E:/Desktop/TEME FACULTATE/PIU/PIU_FinalProject/MedicalSegmentation/MyLabel.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "43498e44e61d1043fa2d85fac597d9156b303ac8bc534e6354597169f2a093dc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///C:/OpenCV/opencv/build/include/opencv2/core/matx.hpp"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "c0ced5f5255014ab2417f24b462f62611b172060b6398d799065c8626c3dc955"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/desktop/teme facultate/piu/piu_finalproject/medicalsegmentation/mylabel.h"
+          },
+          "hashes": {
+            "sha-256": "f1b5961ada1ffbfe3c02576f2399e56dd27c4c8af600e4a2dcc33c0af3da7fd4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core.hpp"
+          },
+          "hashes": {
+            "sha-256": "02a9d4c0d705673b7aed447a8ddcd65ee3fae4abaf9195f27805e5fba4e4c5f1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/cvdef.h"
+          },
+          "hashes": {
+            "sha-256": "aff2fa3f320d8994431841c69dfb0e3b9cbf29a680395870b96dbf6d813ce69b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/version.hpp"
+          },
+          "hashes": {
+            "sha-256": "ae615cb6266f278bdc4dd6efbcd15c74dea4e05347285bd8892c64cbfc8168f8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/hal/interface.h"
+          },
+          "hashes": {
+            "sha-256": "d0d876a5d4c3082ad71541aa6b366ef4dd5efe2d7b9d109d517d6928e181b83e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/cv_cpu_dispatch.h"
+          },
+          "hashes": {
+            "sha-256": "7a17f35bba600a40a6d0fe6cc756f087462479332d47f0a736a785cb81c74e47"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/base.hpp"
+          },
+          "hashes": {
+            "sha-256": "5a3c5081f4f83132da06064fea5d81e648d0b251eafc2d4016c83f7f59559867"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/opencv_modules.hpp"
+          },
+          "hashes": {
+            "sha-256": "f3a63585c90a75bd166460e03ff28ccff73f38a52b04eb8a6f72d02d3b971aa5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/cvstd.hpp"
+          },
+          "hashes": {
+            "sha-256": "9ba9df62de1fb7719cb81291dbd8448efa8c7d92a75b0c4873af5268beb64b1f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/cvstd_wrapper.hpp"
+          },
+          "hashes": {
+            "sha-256": "109f1e19060f7ec1e573953aa40f2592cfd00b6b96f7816cbb2f9b08d0b2c0ca"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/neon_utils.hpp"
+          },
+          "hashes": {
+            "sha-256": "ce0436e0cc3e236e317b03a9859ed31f10d56979391252c754f75dfbeaa4ebd4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/vsx_utils.hpp"
+          },
+          "hashes": {
+            "sha-256": "6a96833b8a4241bd28962bf3c300bddd7280936d3020d328de63cfd3228728f5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/check.hpp"
+          },
+          "hashes": {
+            "sha-256": "44d61de1f4cc864b822c8ed24e78667f54ba41e0bf5b40780cc26abd4578b592"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/traits.hpp"
+          },
+          "hashes": {
+            "sha-256": "2ee21d68861633bfa835d21e40bc381f63f3e05f3467bff8f4be2931436746ed"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/saturate.hpp"
+          },
+          "hashes": {
+            "sha-256": "7ae18d9a6be2a51d11349323888c4c81fc9c864da5399bdc17f32ae896db6a60"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/fast_math.hpp"
+          },
+          "hashes": {
+            "sha-256": "08f29ecef354b534dd85c33264e51718a1cad235dab457ed8fdb65926007fdda"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/types.hpp"
+          },
+          "hashes": {
+            "sha-256": "b8535816ad42a12433775baa442c6572a6bfd509ffc6af636807546bcc44918c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/mat.hpp"
+          },
+          "hashes": {
+            "sha-256": "1dddfb4808e93864e4f67916281efefeef519270576b18ad9b0c98bb8a86fc26"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/bufferpool.hpp"
+          },
+          "hashes": {
+            "sha-256": "7b81257f13fcc5011f489b6cab29f0a8b4496ab6158b8cf5c254bbc5ea55ce7a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/persistence.hpp"
+          },
+          "hashes": {
+            "sha-256": "507496faf3d066a75f00de4acae180c51c1847aa3d2c2f94acb41bb25c1d6af0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/operations.hpp"
+          },
+          "hashes": {
+            "sha-256": "50cc469d423d8cf4eb7a00ff203713023e1a7027cf429899abb445d28830dead"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/cvstd.inl.hpp"
+          },
+          "hashes": {
+            "sha-256": "340a651e83315e23a5af89caf95affae0b5cf19691a25eef3cbb43e9d01a9753"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/optim.hpp"
+          },
+          "hashes": {
+            "sha-256": "8c5b36faf0b05d1371b426ae075bcd4ae42e65a2c401aa4924fa442a77b525d1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/core/ovx.hpp"
+          },
+          "hashes": {
+            "sha-256": "21a2d7b931f406636958ec299cdd076110e0bf51c5a09004bd2ccd84e9993e3a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/imgcodecs.hpp"
+          },
+          "hashes": {
+            "sha-256": "bbf453b741100d2391b84a72a1bf6cd7f66f2f73ea859e21c6c1a1cdd2fb64bc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/highgui.hpp"
+          },
+          "hashes": {
+            "sha-256": "d5132c66ba0259026166fbe90b4e7c76f14dad5f450c51d7c8597802e71a75c0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/videoio.hpp"
+          },
+          "hashes": {
+            "sha-256": "a1e86d0ebade4842d5aa3956c6008b5537fa87e4daff6c877c91d709faaec675"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/opencv/opencv/build/include/opencv2/imgproc/segmentation.hpp"
+          },
+          "hashes": {
+            "sha-256": "45c324942f9b3e11450f12d7726b13a31eccea558e256ea26c19fbb74f1da67e"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -15,13 +15,15 @@ MyLabel::MyLabel(QWidget* parent): QLabel(parent)
 
 MyLabel::~MyLabel() {}
 
-
+//setarea diferentelor dintre dimensiunea label-ului si imaginea incarcata
 void MyLabel::setDiff(Mat img)
 {
     this->_diffX = (this->width() - img.cols) / 2; //this->width() = latimea label-ului
     this->_diffY = (this->height() - img.rows) / 2;//this-> height() = inaltimea label-ului
 }
-
+/// <summary>
+/// Setarea coordonatelor conturului Snake-ului
+/// </summary>
 void MyLabel::setContour()
 {
     //initializare contour snake cu conturul curent desenat
@@ -52,7 +54,7 @@ void MyLabel::drawStartContour(Mat img, QVector<QPoint>& contour)
     {        
         points.push_back(cv::Point(contour[i].x()-_diffX, contour[i].y()-_diffY));
     }
-    cv::polylines(img, points, true, cv::Scalar(255, 0, 0), 1.5, Qt::SolidLine);
+    cv::polylines(img, points, true, cv::Scalar(255, 255, 255), 2.5, Qt::SolidLine);
 }
 
 //Internal energy

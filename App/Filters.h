@@ -27,10 +27,6 @@
 #define FILTERS_H
 
 
-
-//#include "MedicalSegmentation.h"
-
-
 using namespace cv;
 using namespace std;
 
@@ -44,7 +40,7 @@ public:
 	~FiltersClass();
 
 	Mat convertQImageToMat(QImage &image);
-	QImage convertMapToQImage(const Mat& inMat);
+	QImage convertMatToQImage(const Mat& inMat);
 	Mat adjustImage(Mat img, double alpha, int beta, double gamma);
 	Mat noiseReduceMedian(Mat img);
 	Mat noiseReduceGaussian(Mat img);

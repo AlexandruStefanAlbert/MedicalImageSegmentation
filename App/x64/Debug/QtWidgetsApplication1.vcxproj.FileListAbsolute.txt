@@ -1,0 +1,4 @@
+E:\Desktop\EP\QtWidgetsApplication1\x64\Debug\QtWidgetsApplication1.exe
+E:\Desktop\PIU\MedicalSegmentation\x64\Debug\MedicalSegmentation.exe
+E:\Desktop\PIU\PIU_MedicalSegmentation\MedicalSegmentation\x64\Debug\MedicalSegmentation.exe
+E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\x64\Debug\MedicalSegmentation.exe

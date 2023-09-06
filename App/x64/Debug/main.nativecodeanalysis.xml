@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>1239</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::MatStep::buf' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::MatStep::{ctor}</FUNCTION>
+    <DECORATED>??0MatStep@cv@@QEAA@XZ</DECORATED>
+    <FUNCLINE>1239</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>cv::MatStep::buf</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>1245</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'cv::MatStep::buf' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>cv::MatStep::{ctor}</FUNCTION>
+    <DECORATED>??0MatStep@cv@@QEAA@_K@Z</DECORATED>
+    <FUNCLINE>1245</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>cv::MatStep::buf</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>1874</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>cv::SparseMat::elemSize</FUNCTION>
+    <DECORATED>?elemSize@SparseMat@cv@@QEBA_KXZ</DECORATED>
+    <FUNCLINE>1872</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>mat.inl.hpp</FILENAME>
+      <LINE>1874</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>cv::SparseMat::elemSize</FUNCTION>
+    <DECORATED>?elemSize@SparseMat@cv@@QEBA_KXZ</DECORATED>
+    <FUNCLINE>1872</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>utility.hpp</FILENAME>
+      <LINE>568</LINE>
+      <COLUMN>60</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>cv::getElemSize</FUNCTION>
+    <DECORATED>?getElemSize@cv@@YA_KH@Z</DECORATED>
+    <FUNCLINE>568</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>utility.hpp</FILENAME>
+      <LINE>568</LINE>
+      <COLUMN>60</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>cv::getElemSize</FUNCTION>
+    <DECORATED>?getElemSize@cv@@YA_KH@Z</DECORATED>
+    <FUNCLINE>568</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\</FILEPATH>
+      <FILENAME>imgproc.hpp</FILENAME>
+      <LINE>4962</LINE>
+      <COLUMN>25</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).</DESCRIPTION>
+    <FUNCTION>cv::LineIterator::++</FUNCTION>
+    <DECORATED>??ELineIterator@cv@@QEAAAEAV01@XZ</DECORATED>
+    <FUNCLINE>4956</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::leftBox' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::leftBox</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::rightBox' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::rightBox</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::contrast' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::contrast</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::brightness' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::brightness</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::gamma' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::gamma</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::Zoom' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::Zoom</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::alphaSnake' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::alphaSnake</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::betaSnake' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::betaSnake</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::adjustContrast' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::adjustContrast</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::adjustBrightness' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::adjustBrightness</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::adjustGamma' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::adjustGamma</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::toolbox' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::toolbox</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::noiseButton' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::noiseButton</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::thresholdButton' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::thresholdButton</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::detectContourButton' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::detectContourButton</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::drawContourButton' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::drawContourButton</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::playSnakeButton' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::playSnakeButton</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::watershedButton' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::watershedButton</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::loadNewImage' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::loadNewImage</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::saveAs' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::saveAs</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::label' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::label</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::alphaValue' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::alphaValue</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::betaValue' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::betaValue</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::gammaValue' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::gammaValue</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::alphaSnakeValue' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::alphaSnakeValue</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::betaSnakeValue' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::betaSnakeValue</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::filters' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::filters</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::imageLabel' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::imageLabel</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::_alpha' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::_alpha</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::_beta' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::_beta</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::_gamma' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::_gamma</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::_alphaSnake' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::_alphaSnake</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>E:\Desktop\TEME FACULTATE\PIU\PIU_FinalProject\MedicalSegmentation\</FILEPATH>
+      <FILENAME>MedicalSegmentation.h</FILENAME>
+      <LINE>99</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Ui_MainWindow::_betaSnake' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Ui_MainWindow::{ctor}</FUNCTION>
+    <DECORATED>??0Ui_MainWindow@@QEAA@XZ</DECORATED>
+    <FUNCLINE>99</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Ui_MainWindow::_betaSnake</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>578</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>6294</DEFECTCODE>
+    <DESCRIPTION>Ill-defined for-loop.  Loop body not executed.</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;float,3,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@M$02$00@cv@@QEAA@MMM@Z</DECORATED>
+    <FUNCLINE>574</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>578</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>6201</DEFECTCODE>
+    <DESCRIPTION>Index '3' is out of valid index range '0' to '2' for possibly stack allocated buffer 'this-&gt;val'.</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;float,3,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@M$02$00@cv@@QEAA@MMM@Z</DECORATED>
+    <FUNCLINE>574</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>578</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>6294</DEFECTCODE>
+    <DESCRIPTION>Ill-defined for-loop.  Loop body not executed.</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;double,3,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@N$02$00@cv@@QEAA@NNN@Z</DECORATED>
+    <FUNCLINE>574</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>578</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>6201</DEFECTCODE>
+    <DESCRIPTION>Index '3' is out of valid index range '0' to '2' for possibly stack allocated buffer 'this-&gt;val'.</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;double,3,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@N$02$00@cv@@QEAA@NNN@Z</DECORATED>
+    <FUNCLINE>574</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>570</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>6294</DEFECTCODE>
+    <DESCRIPTION>Ill-defined for-loop.  Loop body not executed.</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;float,2,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@M$01$00@cv@@QEAA@MM@Z</DECORATED>
+    <FUNCLINE>566</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>570</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>6201</DEFECTCODE>
+    <DESCRIPTION>Index '2' is out of valid index range '0' to '1' for possibly stack allocated buffer 'this-&gt;val'.</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;float,2,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@M$01$00@cv@@QEAA@MM@Z</DECORATED>
+    <FUNCLINE>566</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>570</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>6294</DEFECTCODE>
+    <DESCRIPTION>Ill-defined for-loop.  Loop body not executed.</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;double,2,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@N$01$00@cv@@QEAA@NN@Z</DECORATED>
+    <FUNCLINE>566</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>570</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>6201</DEFECTCODE>
+    <DESCRIPTION>Index '2' is out of valid index range '0' to '1' for possibly stack allocated buffer 'this-&gt;val'.</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;double,2,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@N$01$00@cv@@QEAA@NN@Z</DECORATED>
+    <FUNCLINE>566</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>586</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>6294</DEFECTCODE>
+    <DESCRIPTION>Ill-defined for-loop.  Loop body not executed.</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;float,4,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@M$03$00@cv@@QEAA@MMMM@Z</DECORATED>
+    <FUNCLINE>582</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>586</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>6201</DEFECTCODE>
+    <DESCRIPTION>Index '4' is out of valid index range '0' to '3' for possibly stack allocated buffer 'this-&gt;val'.</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;float,4,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@M$03$00@cv@@QEAA@MMMM@Z</DECORATED>
+    <FUNCLINE>582</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>586</LINE>
+      <COLUMN>4</COLUMN>
+    </SFA>
+    <DEFECTCODE>6294</DEFECTCODE>
+    <DESCRIPTION>Ill-defined for-loop.  Loop body not executed.</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;double,4,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@N$03$00@cv@@QEAA@NNNN@Z</DECORATED>
+    <FUNCLINE>582</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\OpenCV\opencv\build\include\opencv2\core\</FILEPATH>
+      <FILENAME>matx.hpp</FILENAME>
+      <LINE>586</LINE>
+      <COLUMN>43</COLUMN>
+    </SFA>
+    <DEFECTCODE>6201</DEFECTCODE>
+    <DESCRIPTION>Index '4' is out of valid index range '0' to '3' for possibly stack allocated buffer 'this-&gt;val'.</DESCRIPTION>
+    <FUNCTION>cv::Matx&lt;double,4,1&gt;::{ctor}</FUNCTION>
+    <DECORATED>??0?$Matx@N$03$00@cv@@QEAA@NNNN@Z</DECORATED>
+    <FUNCLINE>582</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>
